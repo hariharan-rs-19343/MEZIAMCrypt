@@ -1,0 +1,15 @@
+{
+  "originHash" : "71c7a7b670cef51eb142707544c77e992d863e15838faf43668982a77e1991d5",
+  "pins" : [
+    {
+      "identity" : "iam_crypt_ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://zrepository.zoho.com/zohocorp/iam/mobile/ios/frameworks/iam_crypt_ios.git",
+      "state" : {
+        "revision" : "664a60b1b472330c6d6c09bf37ac066621ed5839",
+        "version" : "0.1.6-DEV"
+      }
+    }
+  ],
+  "version" : 3
+}
