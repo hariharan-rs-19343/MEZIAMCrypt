@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5239EC342DBA0CBD00268F15 /* MEZCrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5239EC332DBA0CBD00268F15 /* MEZCrypt.swift */; };
 		5239EC372DBA0CD400268F15 /* ZIAMCryptKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5239EC362DBA0CD400268F15 /* ZIAMCryptKit */; };
-		52F8772F2DBA2DC90082806F /* ZIAMCryptWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F8772E2DBA2DC90082806F /* ZIAMCryptWrapper.swift */; };
 		52F8773D2DBA32AF0082806F /* ObjCZIAMCryptAPIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F877372DBA32AF0082806F /* ObjCZIAMCryptAPIResponse.swift */; };
 		52F8773E2DBA32AF0082806F /* ObjCZIAMError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F8773A2DBA32AF0082806F /* ObjCZIAMError.swift */; };
 		52F8773F2DBA32AF0082806F /* ObjCZPayloadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F8773B2DBA32AF0082806F /* ObjCZPayloadModel.swift */; };
@@ -21,7 +20,6 @@
 
 /* Begin PBXFileReference section */
 		5239EC332DBA0CBD00268F15 /* MEZCrypt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MEZCrypt.swift; sourceTree = "<group>"; };
-		52F8772E2DBA2DC90082806F /* ZIAMCryptWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZIAMCryptWrapper.swift; sourceTree = "<group>"; };
 		52F877372DBA32AF0082806F /* ObjCZIAMCryptAPIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjCZIAMCryptAPIResponse.swift; sourceTree = "<group>"; };
 		52F877382DBA32AF0082806F /* ObjCZIAMCryptErrorStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjCZIAMCryptErrorStatus.swift; sourceTree = "<group>"; };
 		52F877392DBA32AF0082806F /* ObjCZIAMEncryptResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjCZIAMEncryptResult.swift; sourceTree = "<group>"; };
@@ -78,7 +76,6 @@
 			children = (
 				52F877282DBA2D8A0082806F /* ObjC */,
 				5239EC332DBA0CBD00268F15 /* MEZCrypt.swift */,
-				52F8772E2DBA2DC90082806F /* ZIAMCryptWrapper.swift */,
 				ABF470162DBA02A30047BCD0 /* MEZIAMCrypt.docc */,
 			);
 			path = MEZIAMCrypt;
@@ -165,7 +162,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52F8772F2DBA2DC90082806F /* ZIAMCryptWrapper.swift in Sources */,
 				ABF470172DBA02A30047BCD0 /* MEZIAMCrypt.docc in Sources */,
 				5239EC342DBA0CBD00268F15 /* MEZCrypt.swift in Sources */,
 				52F8773D2DBA32AF0082806F /* ObjCZIAMCryptAPIResponse.swift in Sources */,
