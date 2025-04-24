@@ -8,7 +8,8 @@
 import Foundation
 internal import ZIAMCryptKit
 
-@objc public class MEZCrypt: NSObject {
+@objcMembers
+public class MEZCrypt: NSObject {
     
     private var ziamCrypt: ZIAMCrypt
     
