@@ -24,7 +24,11 @@ public class MEZCrypt: NSObject {
         headers: [String: String]? = nil,
         completion: @escaping (ObjCZIAMCryptAPIResponse?, ObjCZIAMEncryptResult?) -> Void
     ) {
-        let convertedDict: [String: Data] = dict.mapValues { Data($0.utf8) }
+        debugPrint("DEBUG: MEZIAMCRYPT: Checking expiry and getting encrypted payload...")
+        let convertedDict: [String: Data] = dict.mapValues { $0.data(using: .utf8) ?? Data() }
+        print("convertedDict \(convertedDict)")
+        debugPrint("DEBUG: MEZIAMCRYPT: Converted Dictionary: \(convertedDict)")
+        
         ziamCrypt.checkExpiryAndGetEncryptedPayload(convertedDict, baseURL: baseURL, scope: scope, headers: headers) { handshakeResponse, encryptedPayload in
             let objCZIAMCryptAPIResponse: ObjCZIAMCryptAPIResponse? = ObjCZIAMCryptAPIResponse(from: handshakeResponse)
             let objCZIAMEncryptResult: ObjCZIAMEncryptResult? = ObjCZIAMEncryptResult(from: encryptedPayload)
