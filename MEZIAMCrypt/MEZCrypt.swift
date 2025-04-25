@@ -18,13 +18,14 @@ public class MEZCrypt: NSObject {
     }
     
     @objc public func checkExpiryAndGetEncryptedPayload(
-        dict: [String: Data],
+        dict: [String: String],
         baseURL: String,
         scope: String = "org",
         headers: [String: String]? = nil,
         completion: @escaping (ObjCZIAMCryptAPIResponse?, ObjCZIAMEncryptResult?) -> Void
     ) {
-        ziamCrypt.checkExpiryAndGetEncryptedPayload(dict, baseURL: baseURL, scope: scope, headers: headers) { handshakeResponse, encryptedPayload in
+        let convertedDict: [String: Data] = dict.mapValues { Data($0.utf8) }
+        ziamCrypt.checkExpiryAndGetEncryptedPayload(convertedDict, baseURL: baseURL, scope: scope, headers: headers) { handshakeResponse, encryptedPayload in
             let objCZIAMCryptAPIResponse: ObjCZIAMCryptAPIResponse? = ObjCZIAMCryptAPIResponse(from: handshakeResponse)
             let objCZIAMEncryptResult: ObjCZIAMEncryptResult? = ObjCZIAMEncryptResult(from: encryptedPayload)
             completion(objCZIAMCryptAPIResponse, objCZIAMEncryptResult)
