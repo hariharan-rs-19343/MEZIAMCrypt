@@ -10,11 +10,11 @@ internal import ZIAMCryptKit
 
 @objcMembers
 public class ObjCZIAMCryptAPIResponse: NSObject {
-    public var json: [String: NSString?]?
+    @objc public var json: [String: Any]?
     public var response: URLResponse
     public var error: Error?
     
-    init(json: [String: NSString?]?, response: URLResponse, error: Error?) {
+    init(json: [String: Any]?, response: URLResponse, error: Error?) {
         self.json = json
         self.response = response
         self.error = error
@@ -28,7 +28,7 @@ public class ObjCZIAMCryptAPIResponse: NSObject {
         
         switch result {
         case .success(let value):
-            let convertedJson: [String: NSString?] = value.json.mapValues { $0 as? NSString }
+            let convertedJson: [String: Any]? = value.json.mapValues { $0 }
             self.init(json: convertedJson, response: value.response, error: nil)
         case .failure(let error):
             self.init(json: nil, response: URLResponse(), error: error)
